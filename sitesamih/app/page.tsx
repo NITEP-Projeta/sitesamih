@@ -57,7 +57,7 @@ export default function Home() {
                   <Globe size={16} /> www.projetacs.com
                 </a>
                 <a href="https://linkedin.com/company/projetacs" target="_blank" className="flex items-center gap-2 hover:text-[#AF1B1B] transition-all duration-300 ease-in-out">
-                  <Linkedin size={16} /> linkedin.com/company/projetacs
+                  <Linkedin size={16} /> linkedin.com
                 </a>
               </div>
             </div>
