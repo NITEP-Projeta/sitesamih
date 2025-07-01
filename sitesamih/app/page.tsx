@@ -2,12 +2,19 @@
 'use client';
 
 import { motion, AnimatePresence } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Phone, Mail, Globe, MapPin, Linkedin, Instagram, X, Download } from 'lucide-react';
 import { Dialog } from '@headlessui/react';
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setIsMobile(window.innerWidth < 768);
+    }
+  }, []);
 
   return (
     <main className="min-h-screen flex items-center justify-center bg-[#F9FAFB] p-6">
@@ -44,7 +51,7 @@ export default function Home() {
                   <Phone size={16} /> +55 98 98882-5328 / (98) 3311 4359
                 </a>
                 <a href="mailto:projeta@projetacs.com" className="flex items-center gap-2 hover:text-[#AF1B1B] transition-all duration-300 ease-in-out">
-                  <Mail size={16} /> samih@projetacs.com
+                  <Mail size={16} /> projeta@projetacs.com
                 </a>
                 <a href="https://projetacs.com" target="_blank" className="flex items-center gap-2 hover:text-[#AF1B1B] transition-all duration-300 ease-in-out">
                   <Globe size={16} /> www.projetacs.com
@@ -68,7 +75,13 @@ export default function Home() {
         >
           <h2 className="text-2xl font-semibold text-[#1F1F1F] mb-4">Portfólio Executivo</h2>
           <button
-            onClick={() => setIsOpen(true)}
+            onClick={() => {
+              if (isMobile) {
+                window.open('/portfolio.pdf', '_blank');
+              } else {
+                setIsOpen(true);
+              }
+            }}
             className="bg-[#AF1B1B] hover:bg-[#8B1616] text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:shadow-[0_0_15px_#AF1B1B] transition-all duration-300 ease-in-out"
           >
             Visualizar Portfólio
