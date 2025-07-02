@@ -31,16 +31,16 @@ export default function Home() {
             <h1 className="text-2xl md:text-3xl font-bold tracking-widest uppercase text-[#AF1B1B]">
               SAMIH CORDEIRO MURIBECA
             </h1>
-            <p className="text-sm text-[#E5E7EB] uppercase tracking-wide mt-1">Diretor Comercial</p>
+            <p className="text-sm text-[#E5E7EB] uppercase tracking-wide mt-1 ml-1">Diretor Comercial</p>
 
-            <div className="mt-6 space-y-4 text-sm">
+            <div className="mt-6 space-y-4 text-sm ml-1">
               <div>
                 <p className="font-semibold">Matriz:</p>
                 <p>R. A, 01 - Vila Vicente Fialho,<br/>São Luís - MA, CEP: 65073-210</p>
               </div>
               <div>
                 <p className="font-semibold">Filial Pará:</p>
-                <p>Av. C, QD 77 - LT 32 BCidade Jardim,<br/>Parauapebas - PA, CEP: 68515-000</p>
+                <p>Av. C, QD 77 - LT 32 Cidade Jardim,<br/>Parauapebas - PA, CEP: 68515-000</p>
               </div>
               <div>
                 <p className="font-semibold">Filial Ceará:</p>
@@ -63,7 +63,7 @@ export default function Home() {
             </div>
           </div>
 
-          <p className="text-xs text-gray-400 italic pt-4">Representação executiva | Projeta Consulting</p>
+          <p className="text-xs text-gray-400 italic pt-4 ml-1">Representação executiva | Projeta Consultoria</p>
         </motion.div>
 
         {/* Portfólio com Modal */}
@@ -73,7 +73,7 @@ export default function Home() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="flex flex-col justify-center items-center text-center bg-white p-8"
         >
-          <h2 className="text-2xl font-semibold text-[#1F1F1F] mb-4">Portfólio Executivo</h2>
+          <h2 className="text-2xl font-semibold text-[#1F1F1F] mb-4">Portfólio</h2>
           <button
             onClick={() => {
               if (isMobile) {
@@ -86,7 +86,7 @@ export default function Home() {
           >
             Visualizar Portfólio
           </button>
-          <p className="text-sm text-gray-500 mt-4">Documento institucional | Confidencial</p>
+          <p className="text-sm text-gray-500 mt-4">Documento institucional</p>
         </motion.div>
       </div>
 
@@ -109,7 +109,7 @@ export default function Home() {
                 >
                   <X size={24} />
                 </button>
-                <div className="flex justify-end mb-3">
+                <div className="flex justify-start mb-3">
                   <a
                     href="/portfolio.pdf"
                     download
